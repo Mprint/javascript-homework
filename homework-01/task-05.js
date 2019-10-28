@@ -29,5 +29,7 @@ switch (country.toLowerCase()) {
     break;
 }
 
-alert(`Доставка в ${country[0].toUpperCase() + country.slice(1).toLowerCase()} будет стоить ${price} кредитов`);
-
+alert(
+  `Доставка в ${country[0].toUpperCase() +
+    country.slice(1).toLowerCase()} будет стоить ${price} кредитов`,
+);

@@ -1,4 +1,4 @@
-console.log('task-01 start')
+console.log('task-01 start');
 
 const name = 'Генератор защитного поля';
 let price = 1000;

@@ -10,9 +10,9 @@ while (true) {
   }
   input = Number(input);
 
-  if (Number.isNaN(input) === true){
-      alert('Следует ввести число');
-      continue;
+  if (Number.isNaN(input) === true) {
+    alert('Следует ввести число');
+    continue;
   }
   total = total + input;
 }

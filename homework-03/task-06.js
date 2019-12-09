@@ -1,6 +1,16 @@
 console.log('task-06 -------->');
 
-function calculateTotalPrice(arr, productName) {}
+function calculateTotalPrice(arr, productName) {
+  var values = [];
+
+  arr.forEach(function(item) {
+    if (item.name === productName) {
+      values.push(item.price * item.quantity);
+    }
+  });
+
+  return values;
+}
 
 const products = [
   { name: 'Радар', price: 1300, quantity: 4 },
@@ -9,5 +19,5 @@ const products = [
   { name: 'Захват', price: 1200, quantity: 2 },
 ];
 
-console.log(products.name);
-// console.log(calculateTotalPrice(products, 'Радар')); // 5200
+console.log(calculateTotalPrice(products, 'Радар')); // 5200
+console.log(calculateTotalPrice(products, 'Дроид')); // 2800

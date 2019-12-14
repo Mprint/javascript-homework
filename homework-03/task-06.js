@@ -1,11 +1,10 @@
 console.log('task-06 -------->');
 
 function calculateTotalPrice(arr, productName) {
-  var values = [];
 
   arr.forEach(function(item) {
     if (item.name === productName) {
-      values.push(item.price * item.quantity);
+      values = item.price * item.quantity;
     }
   });
 

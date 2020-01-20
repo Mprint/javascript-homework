@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="viewport" content='width=1000' />
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <style>
+    .wrapper {
+      width: 100vw;
+      height: 80vh;
+    }
+
+    ul.gallery {
+      margin: 5px;
+      border: 1px solid #ccc;
+      float: left;
+      width: 180px;
+    }
+
+    ul.gallery:hover {
+      border: 1px solid #777;
+    }
+
+    ul.gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    ul.desc {
+      padding: 15px;
+      text-align: center;
+    }
+
+    #validation-input {
+      border: 3px solid #bdbdbd;
+    }
+
+    #validation-input.valid {
+      border-color: #4caf50;
+    }
+
+    #validation-input.invalid {
+      border-color: #f44336;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- First -->
+  <div class="wrapper">
+
+    <ul id="categories">
+      <li class="item">
+        <h2>Животные</h2>
+
+        <ul>
+          <li>Кот</li>
+          <li>Хомяк</li>
+          <li>Лошадь</li>
+          <li>Попугай</li>
+        </ul>
+      </li>
+      <li class="item">
+        <h2>Продукты</h2>
+
+        <ul>
+          <li>Хлеб</li>
+          <li>Петрушка</li>
+          <li>Творог</li>
+        </ul>
+      </li>
+      <li class="item">
+        <h2>Технологии</h2>
+
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Node</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <!-- second -->
+  <div class="wrapper">
+    <ul id="ingredients"></ul>
+  </div>
+  <!-- third -->
+  <div class="wrapper">
+    <ul id="gallery"></ul>
+  </div>
+  <!-- firth -->
+  <div class="wrapper">
+    <div id="counter">
+      <button type="button" data-action="decrement">-1</button>
+      <span id="value">0</span>
+      <button type="button" data-action="increment">+1</button>
+    </div>
+  </div>
+  <!-- fifth -->
+  <div class="wrapper">
+    <input type="text" placeholder="Ваше имя?" id="name-input" />
+    <h1>Привет, <span id="name-output">незнакомец</span>!</h1>
+  </div>
+  <!-- six -->
+  <div class="wrapper">
+    <input type="text" id="validation-input" data-length="6" placeholder="Введи 6 символов" />
+  </div>
+  <!-- seven -->
+  <div class="wrapper">
+    <input id="font-size-control" type="range" />
+    <br />
+    <span id="text">Абракадабра!</span>
+  </div>
+  <script type="module" src="./task-01.js"></script>
+  <script type="module" src="./task-02.js"></script>
+
+  <script type="module" src="./task-03.js"></script>
+  <script type="module" src="./task-03-images.js"></script>
+
+  <script type="module" src="./task-04.js"></script>
+  <script type="module" src="./task-05.js"></script>
+  <script type="module" src="./task-06.js"></script>
+  <script type="module" src="./task-07.js"></script>
+</body>
+
+</html>

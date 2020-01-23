@@ -1,17 +1,20 @@
-import images from './task-03-images.js';
+import imagesList from './task-03-images.js';
 
-const ul = document.getElementById('gallery');
-ul.classList.add('gallery');
+const galleryContainer = document.getElementById('gallery');
+const gallery = createGalleryRows(imagesList);
 
-function createImageNode({ url, alt }) {
-  let li = document.createElement('li');
-  let img = document.createElement('img');
-  img.src = url;
-  img.alt = alt;
-  li.appendChild(img);
-  ul.appendChild(li);
+galleryContainer.insertAdjacentHTML('afterbegin', gallery);
+
+function createGalleryRows(items) {
+  return items.map(item => createPhotoGalleryMurkup(item)).join('');
 }
 
-images.forEach(function(images) {
-  ul.insertAdjacentHTML('afterbegin', createImageNode(images));
-});
+function createPhotoGalleryMurkup({ url, alt }) {
+  galleryContainer.classList.add('gallery');
+  const listItem = document.createElement('li');
+  const image = document.createElement('img');
+  image.src = url;
+  image.alt = alt;
+  listItem.appendChild(image);
+  galleryContainer.appendChild(listItem);
+}

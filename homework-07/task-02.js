@@ -7,10 +7,19 @@ const ingredients = [
   'Приправы',
 ];
 
-let ul = document.getElementById('ingredients');
+const ul = document.getElementById('ingredients');
 
-ingredients.forEach(function(ingredient) {
+const listItems = createList(ingredients);
+
+ul.insertAdjacentHTML('afterbegin', listItems)
+
+function createList(arr) {
+  return arr.map(element => generateListMarkup(element)).join('');
+}
+
+function generateListMarkup(item) {
   const li = document.createElement('li');
-  ul.appendChild(li);
-  li.innerHTML += ingredient;
-});
+  li.textContent = item;
+  ul.appendChild(li)
+}
+
